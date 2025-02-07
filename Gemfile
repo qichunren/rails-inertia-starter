@@ -55,3 +55,5 @@ group :test do
 end
 
 gem "inertia_rails", "~> 3.6"
+
+gem "propshaft", "~> 1.1"
