@@ -1,76 +1,58 @@
-# README
+# Rails Inertia Starter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A modern Rails application starter template using Inertia.js with React and Vite, featuring:
 
-Things you may want to cover:
+- 🚀 [Rails 8.0](https://github.com/rails/rails)
+- ⚡️ [Vite](https://vitejs.dev) for frontend tooling
+- ⚛️ [React](https://react.dev) + [TypeScript](https://www.typescriptlang.org)
+- 🔄 [Inertia.js](https://inertiajs.com) for seamless SPA-like navigation
+- 🎨 [Tailwind CSS](https://tailwindcss.com) for styling
+- 📦 [Propshaft](https://github.com/rails/propshaft) for asset pipeline
+- 🐳 [Docker](https://www.docker.com) support with multi-stage builds
+- 🚢 [Kamal](https://kamal-deploy.org) for deployment
+- 🔋 [Solid Cache](https://github.com/rails/solid_cache), [Solid Queue](https://github.com/basecamp/solid_queue), and [Solid Cable](https://github.com/rails/solid_cable) for durable Rails services
+- 🚦 GitHub Actions for CI/CD
 
-* Ruby version
+## Prerequisites
 
-* System dependencies
+- Ruby 3.3.4
+- Node.js 20+
+- SQLite 3
 
-* Configuration
+## Getting Started
 
-* Database creation
+1. Clone this repository:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+git clone https://github.com/rails/rails-inertia-starter.git
+cd rails-inertia-starter
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+./bin/setup
+pnpm install
 ```
+
+3. Start the development server:
+
+```bash
+pnpm run build
+./bin/dev
+```
+
+The application will be available at http://localhost:3000.
+
+
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes and commit them.
+4. Push to your fork and create a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
