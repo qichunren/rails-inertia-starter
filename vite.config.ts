@@ -10,8 +10,8 @@ export default defineConfig({
     outDir: resolve(__dirname, 'app/assets/builds'),
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'src/entrypoints/inertia.js'),
-        global: resolve(__dirname, 'src/entrypoints/global.css'),
+        main: resolve(__dirname, 'app/javascript/entrypoints/inertia.js'),
+        global: resolve(__dirname, 'app/javascript/entrypoints/global.css'),
       },
       output: {
         entryFileNames: '[name].js',
