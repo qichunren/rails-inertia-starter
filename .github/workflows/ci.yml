@@ -60,7 +60,10 @@ jobs:
           bundler-cache: true
 
       - name: Install JavaScript dependencies
-        run: npm install -g pnpm    
+        run: npm install -g pnpm  
+
+      - name: Install dependencies
+        run: pnpm install
 
       - name: Build JavaScript
         run: pnpm run build
