@@ -18,11 +18,17 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @post = Post.new
+    @post = Post.new(title: 'Default Title', content: 'Default Content')
+    render inertia: 'Posts/New', props: {
+      post: @post
+    }
   end
 
   # GET /posts/1/edit
   def edit
+    render inertia: 'Posts/Edit', props: {
+      post: @post
+    }
   end
 
   # POST /posts or /posts.json
@@ -32,10 +38,8 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: "Post was successfully created." }
-        format.json { render :show, status: :created, location: @post }
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.html { redirect_to new_post_url, inertia: { errors: @post.errors } }
       end
     end
   end
@@ -45,10 +49,8 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: "Post was successfully updated." }
-        format.json { render :show, status: :ok, location: @post }
       else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.html { redirect_to edit_post_url(@post), inertia: { errors: @post.errors } }
       end
     end
   end
@@ -59,7 +61,6 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to posts_path, status: :see_other, notice: "Post was successfully destroyed." }
-      format.json { head :no_content }
     end
   end
 
