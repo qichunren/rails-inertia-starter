@@ -1,6 +1,7 @@
 import { Link } from '@inertiajs/react'
 import { useState } from 'react'
 import { router } from '@inertiajs/react'
+import Layout from '../../components/Layout'
 
 const Edit = ({ post, errors }: { post: any, errors: any }) => {
   const [values, setValues] = useState({
@@ -46,5 +47,7 @@ const Edit = ({ post, errors }: { post: any, errors: any }) => {
     </div>
   )
 }
+
+Edit.layout = (page: any) => <Layout>{page}</Layout>
 
 export default Edit

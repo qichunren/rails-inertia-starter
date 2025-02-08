@@ -1,5 +1,5 @@
 import { Link } from '@inertiajs/react'
-
+import Layout from '../../components/Layout'
 const Index = ({ posts }: { posts: any[] }) => {
   return (
     <div className="container mx-auto p-4">
@@ -19,5 +19,7 @@ const Index = ({ posts }: { posts: any[] }) => {
     </div>
   );
 };
+
+Index.layout = (page: any) => <Layout>{page}</Layout>
 
 export default Index;

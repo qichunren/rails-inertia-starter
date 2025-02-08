@@ -1,4 +1,6 @@
 import { Link } from '@inertiajs/react'
+import Layout from '../../components/Layout'
+
 const Show = ({ post }: { post: any }) => {
   return (
     <div className="container mx-auto p-4">
@@ -13,5 +15,7 @@ const Show = ({ post }: { post: any }) => {
     </div>
   );
 };
+
+Show.layout = (page: any) => <Layout>{page}</Layout>
 
 export default Show;

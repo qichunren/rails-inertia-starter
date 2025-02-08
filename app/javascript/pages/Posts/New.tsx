@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "@inertiajs/react";
 import { router } from '@inertiajs/react'
-
+import Layout from '../../components/Layout'
 const New = ({ errors, post }: { errors: any, post: any }) => {
     const [values, setValues] = useState({
         title: post.title,
@@ -62,5 +62,7 @@ const New = ({ errors, post }: { errors: any, post: any }) => {
     </div>
   );
 };
+
+New.layout = (page: any) => <Layout>{page}</Layout>
 
 export default New;
