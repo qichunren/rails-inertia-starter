@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: e11c613ef5cdb1abb9fda8fcd59a10ca2ef29673
+  revision: 096bfcc3e71d019f0ab93f78fca25b1b1d138afb
   branch: 8-0-stable
   specs:
     actioncable (8.0.1)
@@ -324,7 +324,7 @@ GEM
       net-sftp (>= 2.1.2)
       net-ssh (>= 2.8.0)
       ostruct
-    stringio (3.1.2)
+    stringio (3.1.3)
     thor (1.3.2)
     thruster (0.1.11)
     thruster (0.1.11-aarch64-linux)
